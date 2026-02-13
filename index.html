@@ -6,7 +6,7 @@
 
 <style>
 body {
-    background: #0f172a;
+    background: #020617;
     color: #e2e8f0;
     font-family: monospace;
     display:flex;
@@ -18,27 +18,35 @@ body {
 
 .box {
     border:1px solid #334155;
-    padding:40px;
-    border-radius:12px;
+    padding:45px;
+    border-radius:14px;
     background:#020617;
-    box-shadow:0 0 40px rgba(99,102,241,0.2);
+    box-shadow:0 0 60px rgba(99,102,241,0.25);
+    max-width:600px;
 }
 
 button{
-    margin-top:20px;
-    padding:12px 20px;
+    margin-top:25px;
+    padding:14px 24px;
     background:#6366f1;
     border:none;
-    border-radius:8px;
+    border-radius:10px;
     color:white;
-    font-size:16px;
+    font-size:17px;
     cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#818cf8;
 }
 
 #result{
-    margin-top:20px;
+    margin-top:25px;
     color:#22c55e;
     font-size:20px;
+    line-height:1.6;
 }
 </style>
 </head>
@@ -47,19 +55,33 @@ button{
 
 <div class="box">
 <pre>
-SELECT valentine
+SELECT feelings
 FROM my_heart
-WHERE person = 'HIM';
+WHERE person = 'Omer'
+ORDER BY forever DESC;
 </pre>
 
 <button onclick="runQuery()">Run query</button>
+
 <div id="result"></div>
 </div>
 
 <script>
 function runQuery(){
 document.getElementById("result").innerHTML =
-"Query OK — Result: TRUE ❤️";
+`Connection established...
+
+No errors detected.
+No backups needed.
+
+Result:
+You make my days softer,
+my mind calmer,
+and my world warmer.
+Je t'aime, mon amour
+
+I think I found my favorite place —
+next to you ❤️`;
 }
 </script>
 
