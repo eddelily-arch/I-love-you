@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Query Result</title>
+
+<style>
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.box {
+    border:1px solid #334155;
+    padding:40px;
+    border-radius:12px;
+    background:#020617;
+    box-shadow:0 0 40px rgba(99,102,241,0.2);
+}
+
+button{
+    margin-top:20px;
+    padding:12px 20px;
+    background:#6366f1;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+#result{
+    margin-top:20px;
+    color:#22c55e;
+    font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<pre>
+SELECT valentine
+FROM my_heart
+WHERE person = 'HIM';
+</pre>
+
+<button onclick="runQuery()">Run query</button>
+<div id="result"></div>
+</div>
+
+<script>
+function runQuery(){
+document.getElementById("result").innerHTML =
+"Query OK — Result: TRUE ❤️";
+}
+</script>
+
+</body>
+</html>
